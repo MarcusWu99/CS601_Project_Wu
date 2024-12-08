@@ -1,0 +1,30 @@
+/* Sidebar Styles */
+.sidebar {
+    background-color: #d8c3a5;
+    color: #333333;
+    padding: 20px;
+    border-right: 2px solid #eae0d5;
+    grid-row: 2; /* Place in the second row */
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    color: #8d8741;
+    margin-bottom: 15px;
+}
+
+.sidebar p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.sidebar a {
+    color: #91744a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    color: #8d8741;
+    text-decoration: underline;
+}

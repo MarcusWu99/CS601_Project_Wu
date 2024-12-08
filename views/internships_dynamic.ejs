@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internships</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/internships.css">
+    <!-- Component-specific CSS -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <%- include('partials/header') %>
+    <%- include('partials/sidebar') %>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Internships</h1>
+        <% internships.forEach(internship => { %>
+            <div class="internship-item">
+                <h2><%= internship.company_name %></h2>
+                <p><strong>Role:</strong> <%= internship.role %></p>
+                <% if (internship.abstract) { %>
+                    <p><strong>Abstract:</strong> <%= internship.abstract %></p>
+                <% } %>
+                <% if (internship.description) { %>
+                    <p><strong>Description:</strong> <%= internship.description %></p>
+                <% } %>
+                <p><strong>Start Date:</strong> <%= internship.start_date %></p>
+                <p><strong>End Date:</strong> <%= internship.end_date %></p>
+            </div>
+        <% }) %>
+    </main>
+
+    <!-- Include Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>

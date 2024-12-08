@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Yifan Wu</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- Component-specific CSS -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <%- include('partials/header') %>
+    <%- include('partials/sidebar') %>
+
+    <!-- Main Content -->
+    <main>
+        <section class="about-me">
+            <h1>About Me</h1>
+            <p>Hello! I’m <strong>Yifan Wu</strong>, a 22-year-old software developer based in Boston, MA. I am currently pursuing a Master’s degree in Computer Science at Boston University. My focus lies at the intersection of <strong>web development</strong>, <strong>big data processing</strong>, and <strong>artificial intelligence</strong>, with a passion for building scalable, efficient solutions that drive innovation.</p>
+        </section>
+
+        <section class="focus-areas">
+            <h2>Areas of Focus</h2>
+            <ul>
+                <li><strong>Large-Scale Data Management and Optimization:</strong> Developing intelligent ETL pipelines and dynamic query optimization for efficient data warehousing, as demonstrated in my WeatherDB project.</li>
+                <li><strong>Machine Learning in Healthcare:</strong> Designing predictive tools like the ASCVD Risk Reduction Algorithm to integrate AI with medical decision-making.</li>
+                <li><strong>Financial Technology and Sentiment Analysis:</strong> Utilizing NLP and machine learning to analyze market sentiment and predict stock movements for actionable insights.</li>
+                <li><strong>Web Development and Security:</strong> Building high-performance full-stack applications with modern encryption techniques such as AES-256 to ensure data security.</li>
+            </ul>
+        </section>
+
+        <section class="vision">
+            <h2>Vision for the Future</h2>
+            <p>In the coming years, I aim to:</p>
+            <ul>
+                <li>Dive deeper into <strong>cloud computing</strong> and <strong>distributed systems</strong>, focusing on architectures capable of supporting millions of users.</li>
+                <li>Explore <strong>reinforcement learning</strong> and <strong>generative AI</strong>, particularly their applications in autonomous systems, medical diagnostics, and smart city planning.</li>
+                <li>Integrate <strong>explainable AI (XAI)</strong> into complex systems, enhancing transparency and trustworthiness in AI-driven solutions.</li>
+                <li>Advance my knowledge in <strong>data security and privacy</strong>, addressing the growing challenges of the modern digital landscape.</li>
+            </ul>
+        </section>
+
+        <section class="experience">
+            <h2>My Experience</h2>
+            <p>I have gained hands-on experience through internships at Intel China and a maternal and child health hospital, where I worked on backend systems, IT maintenance, and database optimization. Additionally, I have led projects like WeatherDB, a scalable meteorological data management platform, and a sentiment analysis system for financial prediction. These experiences have strengthened my technical expertise and problem-solving skills in real-world settings.</p>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>

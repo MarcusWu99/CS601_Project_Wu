@@ -1,0 +1,33 @@
+/* Internships Section */
+.internship-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #d8c3a5;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.internship-item h2 {
+    font-size: 20px;
+    color: #8d8741;
+    margin-bottom: 10px;
+}
+
+.internship-item p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.internship-item p strong {
+    color: #8d8741;
+}
+
+/* Responsive Design for Internships */
+@media (max-width: 768px) {
+    .internship-item {
+        padding: 10px;
+    }
+}

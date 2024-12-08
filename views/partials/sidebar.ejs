@@ -1,0 +1,11 @@
+<aside class="sidebar">
+    <h2>About Me</h2>
+    <p><strong>Name:</strong> <%= userInfo.name %></p>
+    <p><strong>Location:</strong> <%= userInfo.location %></p>
+    <p><strong>Age:</strong> <%= userInfo.age %></p>
+    <p><strong>Phone:</strong> <%= userInfo.phone %></p>
+    <p><strong>Email:</strong> <a href="mailto:<%= userInfo.email %>"><%= userInfo.email %></a></p>
+    <% if (userInfo.alternate_email) { %>
+        <p><strong>Alternate Email:</strong> <a href="mailto:<%= userInfo.alternate_email %>"><%= userInfo.alternate_email %></a></p>
+    <% } %>
+</aside>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/skills.css">
+    <!-- Component-specific CSS -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <%- include('partials/header') %>
+    <%- include('partials/sidebar') %>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Skills</h1>
+        <section id="skills">
+            <% const categories = {}; %>
+            <% skills.forEach(skill => { %>
+                <% if (!categories[skill.category]) { categories[skill.category] = []; } %>
+                <% categories[skill.category].push(skill.skill_name); %>
+            <% }); %>
+
+            <% for (const category in categories) { %>
+                <div class="skill-category">
+                    <h2><%= category %></h2>
+                    <ul>
+                        <% categories[category].forEach(skill => { %>
+                            <li><%= skill %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+            <% } %>
+        </section>
+    </main>
+
+    <!-- Include Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>

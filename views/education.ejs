@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/education.css">
+    <!-- Component-specific CSS -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+</head>
+<body>
+    <!-- Include Header -->
+    <%- include('partials/header') %>
+    <%- include('partials/sidebar') %>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Education</h1>
+        <% educationData.forEach(edu => { %>
+            <div class="education-item">
+                <h2><%= edu.university_name %></h2>
+                <p><strong>Program:</strong> <%= edu.program %></p>
+                <p><strong>Start Date:</strong> <%= edu.start_date %></p>
+                <p><strong>End Date:</strong> <%= edu.end_date %></p>
+                <% if (edu.main_courses) { %>
+                    <p><strong>Main Courses:</strong> <%= edu.main_courses %></p>
+                <% } %>
+                <% if (edu.achievements) { %>
+                    <p><strong>Achievements:</strong> <%= edu.achievements %></p>
+                <% } %>
+            </div>
+        <% }) %>
+    </main>
+
+    <!-- Include Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>

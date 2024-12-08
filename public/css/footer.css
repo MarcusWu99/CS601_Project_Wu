@@ -1,0 +1,25 @@
+/* Footer Styles */
+footer {
+    background-color: #8e8d8a;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-align: center;
+    border-top: 2px solid #d8c3a5;
+    grid-column: 1 / span 2; /* Full width */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #faf8f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #eae0d5;
+    text-decoration: underline;
+}

@@ -1,0 +1,65 @@
+/* About Me Section */
+.about-me {
+    margin-bottom: 40px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #d8c3a5;
+    border-radius: 8px;
+}
+
+.about-me h1 {
+    font-size: 28px;
+    color: #8d8741;
+    margin-bottom: 15px;
+}
+
+.about-me p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* Focus Areas Section */
+.focus-areas, .vision, .experience {
+    margin-bottom: 40px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #d8c3a5;
+    border-radius: 8px;
+}
+
+.focus-areas h2, .vision h2, .experience h2 {
+    font-size: 24px;
+    color: #8d8741;
+    margin-bottom: 15px;
+}
+
+.focus-areas ul, .vision ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.focus-areas li, .vision li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Experience Section */
+.experience p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    .about-me, .focus-areas, .vision, .experience {
+        padding: 10px;
+    }
+}

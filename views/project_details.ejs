@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= project.title %> - Project Details</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <!-- Component-specific CSS -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script> <!-- MathJax -->
+</head>
+<body>
+    <!-- Include Header -->
+    <%- include('partials/header') %>
+    <%- include('partials/sidebar') %>
+
+    <!-- Main Content -->
+    <main>
+        <div class="title-container">
+            <h1><%= project.title %></h1>
+            <% if (project.github_link) { %>
+                <a href="<%= project.github_link %>" target="_blank" class="github-button">View on GitHub</a>
+            <% } %>
+        </div>
+        <% if (project.abstract) { %>
+            <p><strong>Abstract:</strong> <%= project.abstract %></p>
+        <% } %>
+        <% if (project.description) { %>
+            <section class="description">
+                <h2>Description</h2>
+                <div class="formatted-description">
+                    <!-- Description content is preformatted for proper rendering -->
+                    <%- project.description %>
+                </div>
+            </section>
+        <% } %>
+        <% if (project.tech_stack) { %>
+            <section class="tech-stack">
+                <h2>Tech Stack</h2>
+                <p><%= project.tech_stack %></p>
+            </section>
+        <% } %>
+        <% if (images.length > 0) { %>
+            <section class="images">
+                <h2>Project Images</h2>
+                <img src="/images/projects/project<%= project.id %>.jpg" alt="Image for <%= project.title %>">
+            </section>
+        <% } %>
+    </main>
+
+    <!-- Include Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>

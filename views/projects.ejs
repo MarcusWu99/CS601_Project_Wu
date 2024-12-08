@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/projects.css">
+    <!-- Component-specific CSS -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+
+</head>
+<body>
+    <!-- Include Header -->
+    <%- include('partials/header') %>
+    <%- include('partials/sidebar') %>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Projects</h1>
+        <section id="projects">
+            <% projects.forEach(project => { %>
+                <div class="project-item">
+                    <!-- Project Image -->
+                    <img src="/images/projects/project<%= project.id %>.jpg" alt="<%= project.title %> Image" class="project-image">
+        
+                    <!-- Project Title -->
+                    <h3 class="project-title"><%= project.title %></h3>
+        
+                    <!-- Project Abstract -->
+                    <% if (project.abstract) { %>
+                        <p><%= project.abstract %></p>
+                    <% } %>
+        
+                    <!-- Details Link -->
+                    <a href="/projects/<%= project.id %>" class="details-link">View Details</a>
+                </div>
+            <% }) %>
+        </section>        
+    </main>
+
+    <!-- Include Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>

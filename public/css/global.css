@@ -1,0 +1,117 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 250px 1fr; /* Sidebar + Main Content */
+    grid-template-rows: auto 1fr auto; /* Header + Main + Footer */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Main Content */
+main {
+    padding: 20px 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    grid-column: 2; /* Place main content in the second column */
+}
+
+main h1 {
+    font-size: 28px;
+    color: #8d8741;
+    margin-bottom: 20px;
+}
+
+/* Section Titles */
+main h2 {
+    font-size: 24px;
+    color: #8d8741;
+    border-bottom: 2px solid #d8c3a5;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Education and Internship Items */
+.education-item, .internship-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #d8c3a5;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.education-item h2, .internship-item h2 {
+    font-size: 20px;
+    color: #8d8741;
+    margin-bottom: 10px;
+}
+
+.education-item p, .internship-item p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+/* Lists */
+main ul {
+    list-style-type: square;
+    margin: 10px 0 20px 20px;
+    padding: 0;
+}
+
+main li {
+    margin-bottom: 5px;
+}
+
+/* Projects Section */
+#projects {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 20px; /* Space between items */
+    width: 100%; /* Ensure container spans full width */
+    margin-top: 20px; /* Add space between title and projects */
+    clear: both; /* Ensure no floating elements interfere */
+}
+
+/* Project Items */
+.project-item {
+    background-color: #eae0d5;
+    padding: 15px;
+    border: 1px solid #d8c3a5;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+    width: 100%;
+    max-width: 700px; /* Restrict maximum size */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.project-item h3,
+.project-item p {
+    text-align: left; /* Align text to the left */
+}
+
+/* Responsive Design for Projects */
+@media (max-width: 768px) {
+    #projects {
+        grid-template-columns: 1fr; /* One item per row on small screens */
+    }
+}
+
+/* Links */
+a {
+    color: #91744a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #8d8741;
+    text-decoration: underline;
+}
