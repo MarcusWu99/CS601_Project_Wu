@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: CS601_Project_Wu
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        value: mysql://haha12134:12345678@db4free.net:3306/portfoliodb_2024
